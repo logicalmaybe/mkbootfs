@@ -76,6 +76,7 @@
 #define AID_SDCARD_PICS   1033  /* external storage photos access */
 #define AID_SDCARD_AV     1034  /* external storage audio/video access */
 #define AID_SDCARD_ALL    1035  /* access all users external storage */
+#define AID_LOGD          1036  /* log daemon */
 #define AID_AUDIT         1038  /* audit daemon */
 
 #define AID_THEMEMAN      1300  /* theme manager */
@@ -173,6 +174,7 @@ static const struct android_id_info android_ids[] = {
     { "sdcard_pics",   AID_SDCARD_PICS, },
     { "sdcard_av",     AID_SDCARD_AV, },
     { "sdcard_all",    AID_SDCARD_ALL, },
+    { "logd",          AID_LOGD, },
 
     { "shell",         AID_SHELL, },
     { "cache",         AID_CACHE, },
