@@ -113,6 +113,7 @@
 #define AID_MOT_DLNA      9011  /* DLNA native */
 #endif // MOTOROLA_UIDS
 
+#define AID_EVERYBODY     9997  /* shared between all apps in the same profile */
 #define AID_MISC          9998  /* access to misc storage */
 #define AID_NOBODY        9999
 
@@ -204,8 +205,10 @@ static const struct android_id_info android_ids[] = {
     { "mot_dlna",  AID_MOT_DLNA, },
 #endif
 
+    { "everybody",     AID_EVERYBODY, },
     { "misc",          AID_MISC, },
     { "nobody",        AID_NOBODY, },
+
     { "theme_man", AID_THEMEMAN },
     { "audit",      AID_AUDIT, },
 };
