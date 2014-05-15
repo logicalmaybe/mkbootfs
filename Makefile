@@ -18,7 +18,7 @@ $(OUT):$(OBJECTS)
 	$(CROSS_COMPILE)$(CC) -o $@ $^ -L. -static
 
 .c.o:
-	$(CROSS_COMPILE)$(CC) -o $@ -c $< -I.
+	$(CROSS_COMPILE)$(CC) -o $@ -c $< -I. -Werror
 
 clean:
 	$(RM) $(OUT) $(OBJECTS) Makefile.~
