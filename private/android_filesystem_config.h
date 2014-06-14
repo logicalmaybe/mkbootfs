@@ -315,7 +315,7 @@ static const struct fs_path_config android_files[] = {
 };
 
 static inline void fs_config(const char *path, int dir,
-                             unsigned *uid, unsigned *gid, unsigned *mode, uint64_t *capabilities)
+                             long unsigned *uid, long unsigned *gid, unsigned *mode, uint64_t *capabilities)
 {
     const struct fs_path_config *pc;
     int plen;
