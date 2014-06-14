@@ -76,7 +76,7 @@
 #define AID_SDCARD_PICS   1033  /* external storage photos access */
 #define AID_SDCARD_AV     1034  /* external storage audio/video access */
 #define AID_SDCARD_ALL    1035  /* access all users external storage */
-#define AID_AUDIT         1036  /* audit daemon */
+#define AID_AUDIT         1038  /* audit daemon */
 
 #define AID_THEMEMAN      1300  /* theme manager */
 
