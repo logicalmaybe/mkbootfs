@@ -3,22 +3,24 @@ CC = gcc
 
 ifeq ($(windir),)
 EXE =
-RM = rm -vf
+RM = rm -f
 else
 EXE = .exe
 RM = del
 endif
 
+CFLAGS = -ffunction-sections -O3
+LDFLAGS = -Wl,--gc-sections
 OBJECTS = mkbootfs.o
 OUT = mkbootfs$(EXE)
 
 all:$(OUT)
 
 $(OUT):$(OBJECTS)
-	$(CROSS_COMPILE)$(CC) -o $@ $^ -L. -static
+	$(CROSS_COMPILE)$(CC) -o $@ $^ -L. $(LDFLAGS) -static -s
 
 .c.o:
-	$(CROSS_COMPILE)$(CC) -o $@ -c $< -I. -Werror
+	$(CROSS_COMPILE)$(CC) -o $@ $(CFLAGS) -c $< -I. -Werror
 
 clean:
 	$(RM) $(OUT) $(OBJECTS) Makefile.~
