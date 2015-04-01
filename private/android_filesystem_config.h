@@ -365,5 +365,8 @@ static inline void fs_config(const char *path, int dir,
             path, pc->prefix ? pc->prefix : "", *uid, *gid, *mode);
 #endif
 }
+
+ssize_t fs_config_generate(char *buffer, size_t length, const struct fs_path_config *pc);
+
 #endif
 #endif
