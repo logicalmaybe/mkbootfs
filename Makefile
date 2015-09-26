@@ -9,7 +9,7 @@ EXE = .exe
 RM = del
 endif
 
-CFLAGS = -ffunction-sections -O3
+CFLAGS = -ffunction-sections -O3 -Wno-unused-result
 LDFLAGS = -Wl,--gc-sections
 OBJECTS = mkbootfs.o
 OUT = mkbootfs$(EXE)
